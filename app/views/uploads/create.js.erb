@@ -1,0 +1,32 @@
+if(<%= @upload.errors.any? %>){
+	alert("上傳失敗請重新上傳 <%= @upload.errors.to_json %>");
+}
+else{
+	FB.login(function(){
+		FB.api('/me/feed', 'post',
+		{
+			message: '春水堂續茶接力賽', 
+			description: '活動測試', 
+			picture: '<%= "#{root_url}#{@upload.image}" %>', 
+			link: '<%= uploads_url %>' 
+		},
+
+		function (response) {
+			if (response && response.id) {
+				alert("分享完成，感謝您參加活動");
+			}
+			else{
+				alert("分享失敗，請重新上傳分享");
+
+				//destroy record
+				$.ajax({
+					type: "DELETE",
+					url: "<%= upload_path(@upload) %>"
+				});
+				
+			}
+
+			window.location = "uploads";
+		});
+	}, {scope: 'publish_actions'});
+}

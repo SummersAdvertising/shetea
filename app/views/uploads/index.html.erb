@@ -1,0 +1,80 @@
+<h1>Listing uploads</h1>
+
+<%= link_to "我要上傳", "javascript:void(0)", :id => "fb_join" %>
+
+<%= render 'form' %>
+
+<table>
+  <tbody>
+    <% @uploads.each do |upload| %>
+      <tr>
+        <td><%= image_tag(upload.image, :style => "width: 150px")  %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<div class="fb-like-box" data-href="https://www.facebook.com/pages/%E5%A4%8F%E5%A4%A9%E5%BB%A3%E5%91%8A-%E5%89%B5%E6%84%8F%E5%B0%8F%E5%AE%87%E5%AE%99%E6%B0%B8%E9%81%A038%E5%BA%A6C/183671124990124?ref=ts&amp;fref=ts&amp;filter=1" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>
+
+<!-- for fb like button, include the JavaScript SDK --> 
+<div id="fb-root"></div>
+<script>
+window.fbAsyncInit = function() {
+  FB.init({
+    appId      : '267446313433381',
+    status     : true,
+    xfbml      : true
+  });
+};
+(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/zh_TW/all.js#xfbml=1&appId=267446313433381";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<script type="text/javascript">
+$(".fb-like-box").hide();
+
+var page_like_or_unlike_callback = function(url, html_element) {
+  fb_share();
+}
+
+$("a#fb_join").click(function(e){
+  e.preventDefault();
+  fb_share();
+});
+
+function fb_share(){
+  FB.login(function(){
+    FB.api('me/likes/183671124990124', 'get', function(resp) {
+      if(resp.data.length){
+        $(".fb-like-box").hide();
+
+        FB.api("/me",function (response) {
+          if (response && response.id) {
+            $("input#upload_fbID").val(response.id);
+            $("input#upload_name").val(response.name);
+            $("input#upload_email").val(response.email);
+            $("#new_upload").show();
+          }
+          else{
+            alert("取得資料失敗，請重新點選我要上傳");
+          }
+        }); 
+        
+      }
+      else{
+        alert("先按讚才能繼續");
+        $(".fb-like-box").show();
+
+        // In your onload handler
+        FB.Event.subscribe('edge.create', page_like_or_unlike_callback);
+      }
+    });
+  }, {scope: ['publish_actions', 'user_likes']});
+}
+
+</script>
