@@ -1,6 +1,9 @@
 Springtea::Application.routes.draw do
-  get "statics/index"
-  resources :uploads, :only => [:index, :create, :destroy]
+	resources :uploads, :only => [:index, :create, :destroy]
 
-  root :to => "statics#index"
+	PagesController.action_methods.each do |action|
+		get "/#{action}", to: "pages##{action}"
+	end
+
+	root :to => "pages#under_construction"
 end
