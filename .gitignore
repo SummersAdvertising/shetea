@@ -17,3 +17,5 @@
 
 /config/deploy
 /config/deploy.rb
+
+public/uploads/*
