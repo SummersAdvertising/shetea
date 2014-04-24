@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140421051501) do
+ActiveRecord::Schema.define(version: 20140424080244) do
 
   create_table "uploads", force: true do |t|
     t.string   "image"
@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(version: 20140421051501) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "email"
+    t.string   "address"
+    t.string   "access_token"
   end
 
 end

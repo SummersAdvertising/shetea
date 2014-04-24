@@ -1,36 +1,48 @@
-<%= form_for(@upload, :remote => true, :html => {:style => "display:none;"} ) do |f| %>
-  <% if @upload.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@upload.errors.count, "error") %> prohibited this upload from being saved:</h2>
+<div style="display: none;">
+    <div id="form">
+        <%= form_for(@upload, :remote => true ) do |f| %>
+        <p>請填寫完整之正確資料，以免錯失中獎機會喔！</p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td width="17%">上傳照片</td>
+                <td width="83%">
+                    <%= f.file_field :image, :class =>"file" %></td>
+            </tr>
+            <tr>
+                <td>真實姓名</td>
+                <td>
+                    <%= f.text_field :name, :class =>"text" %></td>
+            </tr>
+            <tr>
+                <td>聯絡地址</td>
+                <td>
+                    <%= f.text_field :address, :class =>"text" %></td>
+            </tr>
+            <tr>
+                <td>聯絡電話</td>
+                <td>
+                    <%= f.text_field :tel, :class =>"text" %></td>
+            </tr>
+            <tr>
+                <td>電子信箱</td>
+                <td>
+                    <%= f.email_field :email, :class =>"text" %></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
 
-      <ul>
-      <% @upload.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+                    <%= f.hidden_field :fbID %>
+                    <%= f.hidden_field :access_token %>
+                    <br />
+
+                    <input type="button" value="button" class="submit" id="clear" />
+                    <%= f.submit nil, :class =>
+                    "submit", :id => "send" %>
+                    <br></td>
+            </tr>
+        </table>
+        <% end %>
+
+        <img id="sending" src="/images/sending.gif" style="display: none;" />
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :image %><br>
-    <%= f.file_field :image %>
-  </div>
-  <div class="field">
-    <%= f.hidden_field :fbID %>
-  </div>
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :tel %><br>
-    <%= f.text_field :tel %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.email_field :email %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+</div>

@@ -1,47 +1,163 @@
-<h1>Listing uploads</h1>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>SHARE TEA│春水堂姊妹品牌ㄒㄩˋ茶接力賽</title>
 
-<%= link_to "我要上傳", "javascript:void(0)", :id => "fb_join" %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
 
-<%= render 'form' %>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/colorbox.css">
+    <link rel="stylesheet" href="/css/upload.css">
 
-<table>
-  <tbody>
-    <% @uploads.each do |upload| %>
-      <tr>
-        <td><%= image_tag(upload.image, :style => "width: 150px")  %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+    <script src="/js/jquery.colorbox-min.js"></script>
+    <script src="/js/anchor-art.js"></script>
+</head>
 
-<div class="fb-like-box" data-href="https://www.facebook.com/pages/%E5%A4%8F%E5%A4%A9%E5%BB%A3%E5%91%8A-%E5%89%B5%E6%84%8F%E5%B0%8F%E5%AE%87%E5%AE%99%E6%B0%B8%E9%81%A038%E5%BA%A6C/183671124990124?ref=ts&amp;fref=ts&amp;filter=1" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>
+<body>
+    <div id="wrapper">
+        <div id="top">
+            <a href="#wrapper"><img src="/images/s-06.png"/></a>
+        </div>
+        <div id="header">
+            <ul>
+                <li>
+                    <a href="#" target="_blank">春水堂</a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">瑪可緹</a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">秋山堂</a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">茶湯會</a>
+                </li>
+            </ul>
+            <a id="back" href="/index">回首頁</a>
+            <h1>玩味SHARE TEA， S 型好時尚！</h1>
+            <p>
+                <b>上傳 S 型喝法，你就是下一個快速竄紅的時尚達人！</b>
+                <br />
+                ㄒㄩˋ茶接力賽的開幕儀式當然要與眾不同，
+                <br>
+                不來個時尚的喝法，似乎對不起自己的品味！
+                <br>
+                凡於 5/1~5/31，依 S 型時尚姿態範例，品嘗春水堂、瑪可緹、秋山堂、茶湯會商品，
+                <br />
+                並將照片上傳到此頁面，即有機會抽中春水堂羊脂白手握杯二入！
+                <br>數量有限，快把握機會喔！
+            </p>
+            <div class="pic">
+                <img src="/images/u-02.png"/>
+            </div>
+        </div>
+        <div id="article">
+            <div id="content">
+                <img src="/images/u-04.png" class="pic"/>
+                <h3>參加方式</h3>
+                <div>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td width="24%" valign="bottom">
+                                按「讚」加入「春水堂
+                                <br />
+                                人文茶館」粉絲團。
+                            </td>
+                            <td width="26%" valign="bottom">
+                                上傳 S 型玩味商品姿態，
+                                <br />
+                                並分享至您的 Facebook。
+                            </td>
+                            <td width="13%" valign="bottom">參加抽獎</td>
+                            <td width="37%" valign="bottom">
+                                <a href="/term">
+                                    <img src="/images/u-03.png"/>
+                                </a>
+                                <br />
+                                <span>
+                                    每個 Facebook 帳號
+                                    <br />
+                                    限參加乙次抽獎活動
+                                </span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!--content-->
+            <div id="upload">
+                <div id="fb">
+                    <div class="fb-like-box" data-href="https://www.facebook.com/ChunShui1983?ref=ts&amp;fref=ts&amp;filter=1" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="false" data-show-border="false"></div>
+                </div>
+                <%= link_to image_tag("/images/u-09.png"), "#form", :class => "inline", :id => "fb_join" %>
+            </div>
 
-<!-- for fb like button, include the JavaScript SDK --> 
-<div id="fb-root"></div>
-<script>
-window.fbAsyncInit = function() {
-  FB.init({
-    appId      : '267446313433381',
-    status     : true,
-    xfbml      : true
-  });
-};
-(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/zh_TW/all.js#xfbml=1&appId=267446313433381";
-    fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-</script>
+            <div id="wall">
+                <%= render @uploads %>
+            </div>
+
+            
+            <div id="paginator" class="page">
+                <%= paginate @uploads, :remote => true %>
+            </div>
+        </div>
+
+        <%= render 'form' %>
+        
+        <!--article-->
+        <div id="footer">
+            <p class="left">
+                春水堂姐妹品牌　│
+                <a href="#" target="_blank">春水堂</a>
+                │
+                <a href="#" target="_blank">瑪可緹</a>
+                │
+                <a href="#" target="_blank">秋山堂</a>
+                │
+                <a href="#" target="_blank">茶湯會</a>
+            </p>
+            <p class="right">茶香聖火持續接力，綿延不息</p>
+        </div>
+    </div>
+
+    <!-- for fb like button, include the JavaScript SDK -->    
+    <div id="fb-root"></div>
+    <script>
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId      : '267446313433381',
+            status     : true,
+            xfbml      : true
+        });
+    };
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/zh_TW/all.js#xfbml=1&appId=267446313433381";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+</body>
 
 <script type="text/javascript">
-$(".fb-like-box").hide();
 
-var page_like_or_unlike_callback = function(url, html_element) {
-  fb_share();
-}
+/* for form */
+$("#clear").click(function(e){
+    e.preventDefault();
+    $("#new_upload")[0].reset();
+});
 
+$("#new_upload").submit(function(){
+    $(this).hide();
+    $("#sending").show();
+});
+
+/* for FB */
 $("a#fb_join").click(function(e){
   e.preventDefault();
   fb_share();
@@ -49,32 +165,35 @@ $("a#fb_join").click(function(e){
 
 function fb_share(){
   FB.login(function(){
-    FB.api('me/likes/183671124990124', 'get', function(resp) {
+    //is user like or not
+    FB.api('me/likes/114415101159', 'get', function(resp) {
       if(resp.data.length){
-        $(".fb-like-box").hide();
+        //get FB access token
+        FB.getLoginStatus(function (response) {
+            if (response.authResponse) {
+                $("input#upload_access_token").val(response.authResponse.accessToken);
 
-        FB.api("/me",function (response) {
-          if (response && response.id) {
-            $("input#upload_fbID").val(response.id);
-            $("input#upload_name").val(response.name);
-            $("input#upload_email").val(response.email);
-            $("#new_upload").show();
-          }
-          else{
-            alert("取得資料失敗，請重新點選我要上傳");
-          }
-        }); 
+                FB.api("/me",function (response) {
+                    if (response && response.id) {
+                        $("input#upload_fbID").val(response.id);
+                        $("input#upload_name").val(response.name);
+                        $("input#upload_email").val(response.email);
+                        $.colorbox({inline:true, width:"723", href:"#form"});
+                    }
+                }); 
+            }
+            else{
+                alert("FB 登入失敗，請重新點選我要上傳");
+            }
+        });
         
       }
       else{
-        alert("先按讚才能繼續");
-        $(".fb-like-box").show();
-
-        // In your onload handler
-        FB.Event.subscribe('edge.create', page_like_or_unlike_callback);
+        alert("請先按讚才能參與活動");
       }
     });
   }, {scope: ['publish_actions', 'user_likes']});
 }
 
 </script>
+</html>

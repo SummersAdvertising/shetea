@@ -1,0 +1,2 @@
+$('#wall').html('<%= escape_javascript render(@uploads) %>');
+$('#paginator').html('<%= escape_javascript(paginate(@uploads, :remote => true).to_s) %>');

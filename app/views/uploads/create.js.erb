@@ -1,32 +1,30 @@
 if(<%= @upload.errors.any? %>){
-	alert("上傳失敗請重新上傳 <%= @upload.errors.to_json %>");
+	$("#sending").hide();
+    $("#new_upload").show();
+	alert("上傳失敗請重新上傳:\n\n<%= @upload.errors.full_messages.join("\\n").html_safe %>");
 }
 else{
-	FB.login(function(){
-		FB.api('/me/feed', 'post',
-		{
-			message: '春水堂續茶接力賽', 
-			description: '活動測試', 
-			picture: '<%= "#{root_url}#{@upload.image}" %>', 
-			link: '<%= uploads_url %>' 
-		},
+	FB.api('/me/feed', 'post',
+	{
+		access_token : '<%= @upload.access_token %>',
+		message: '春水堂續茶接力賽',
+		description: '活動測試',
+		picture: '<%= "#{root_url}#{@upload.image}" %>',
+		link: '<%= uploads_url %>'
+	},
+	function (response) {
+		if (response && response.id) {
+			alert("分享完成，感謝您參加活動");
+		}
+		else{
+			alert("分享失敗，請重新上傳分享");
 
-		function (response) {
-			if (response && response.id) {
-				alert("分享完成，感謝您參加活動");
-			}
-			else{
-				alert("分享失敗，請重新上傳分享");
-
-				//destroy record
-				$.ajax({
-					type: "DELETE",
-					url: "<%= upload_path(@upload) %>"
-				});
-				
-			}
-
-			window.location = "uploads";
-		});
-	}, {scope: 'publish_actions'});
+			//destroy record
+			$.ajax({
+				type: "DELETE",
+				url: "<%= upload_path(@upload) %>"
+			});
+		}
+		window.location.href = '/uploads'; 
+	});
 }

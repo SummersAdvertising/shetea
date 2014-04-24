@@ -1,8 +1,9 @@
 class UploadsController < ApplicationController
+  layout false
   before_action :set_upload, only: [:destroy]
 
   def index
-    @uploads = Upload.order("created_at DESC").all
+    @uploads = Upload.order("created_at DESC").page(params[:page]).per(8)
     @upload = Upload.new
   end
 
@@ -27,6 +28,6 @@ class UploadsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def upload_params
-      params.require(:upload).permit(:image, :fbID, :name, :tel, :email)
+      params.require(:upload).permit(:image, :fbID, :name, :tel, :email, :address, :access_token)
     end
 end
