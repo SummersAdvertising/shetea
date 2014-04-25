@@ -2,7 +2,7 @@
 /*-----------------------------------------------------------------------全域---*/
 
 html{background:#FFF6EA;}
-body{width:1280px;margin:0 auto;font:300 16px 微軟正黑體,Microsoft JhengHei;line-height:1.7em;background:url(../images/s-02.gif) repeat;color:#362e2b}
+body{width:1280px;margin:0 auto;font:300 16px 微軟正黑體,Microsoft JhengHei;line-height:1.7em;background:url(/images/s-02.gif) repeat;color:#362e2b}
 #wrapper{background:url(/images/s-01.jpg) 0 0 no-repeat;position:relative}
 a{font:300 16px 微軟正黑體,Microsoft JhengHei;line-height:1.7em;text-decoration:none;
 -webkit-transition:all ease .3s;-moz-transition:all ease .3s}

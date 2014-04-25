@@ -1,0 +1,84 @@
+/*-----------------------------------------------------------------------全域---*/
+
+html{background:#FFF6EA;}
+body{width:1280px;margin:0 auto;font:300 16px 微軟正黑體,Microsoft JhengHei;line-height:1.7em;background:url(/images/s-02.gif) repeat;color:#59493f}
+#wrapper{position:relative}
+a{font:300 16px 微軟正黑體,Microsoft JhengHei;line-height:1.7em;text-decoration:none;
+-webkit-transition:all ease .3s;-moz-transition:all ease .3s}
+
+/*-----------------------------------------------------------------------頁首---*/
+
+#header{height:650px;background:url(/images/i-01.jpg) 0 0 no-repeat #fff}
+#header ul,#header .girls,#header .girls span,#spotlight,#quick,#header p{position:absolute}
+
+#header ul{overflow:hidden;top:0;right:40px;background:url(/images/u-11.png) 0 0 no-repeat;padding:0 0 0 25px}
+#header li{float:left;width:50px;height:50px;margin:0 0 0 5px}
+#header li a{font-size:12px;color:#555;display:block;width:100%;height:100%;text-align:center;padding:25px 0 0 0;background: url(/images/u-01.png) center 8px no-repeat #fff;}
+#header li a:hover{background:url(/images/u-01.png) center 8px no-repeat #7ECEF4;color:#fff}
+
+#spotlight{z-index:2;top:0;left:40px;background:url(/images/i-06.png) 0 0 no-repeat;width:206px;height:560px;overflow:hidden}
+
+.girls{z-index:3;}
+.girls span{display:inline-block;width:60px;height:60px;text-align:center;color:#fff;background:#552018;border-radius:50%;padding:20px 0 0 0;
+font:900 .9em 微軟正黑體,Microsoft JhengHei;text-shadow:0 -1px 0 #2F110C;box-shadow:2px 2px 0 #A3947B;bottom:40%;left:30px}
+#girl-1{width:206px;height:252px;left:45px;top:222px}
+#girl-2{width:189px;height:239px;left:230px;top:165px}
+#girl-3{width:186px;height:244px;right:240px;top:160px}
+#girl-4{width:199px;height:254px;right:40px;top:215px}
+
+#quick{width:1090px;top:540px;left:150px}
+#quick span{padding:38px 0 0 0;display:inline-block;}
+#quick .brand{padding:38px 0 0 0;display:inline-block;width:100%;height:100%}
+#quick .brand:hover{background:url(/images/i-07.png) right top no-repeat}
+#quick .link:hover{position:relative;top:-5px}
+
+#header p{text-align:center;font-size:.9em;color:#5F231B;top:400px;left:385px}
+
+/*-----------------------------------------------------------------------頁身---*/
+
+.content{position:relative;line-height:2em}
+.content .top{position:absolute;bottom:-10px;right:40px}
+.content .top:hover{bottom:-5px}
+.content .item{position:absolute;top:360px;left:125px}
+.content .intro{height:500px;background:url(/images/i-24.jpg) 0 0 no-repeat #fff;
+text-align:center;padding:110px 0 0 0}
+.content .intro p{margin:65px 0 0 0}
+.content span{font-size:.9em}
+.content b{color:#fb7c00}
+.content a{color:#0C62AD}
+.content a:hover{text-decoration:underline}
+
+/*-----------------------------------------------------------------------春水堂---*/
+
+#content-1{padding:0 0 90px 0}
+#content-1 .intro{height:550px;background:url(/images/i-16.jpg) 0 0 no-repeat #fff;
+padding:155px 0 0 0}
+#content-1 .intro a:hover{position:relative;top:5px}
+#content-1 .intro p{margin:100px 0 0 0}
+#content-1 .item{top:410px}
+#content-1 .main{width:1200px;margin:350px auto 0 auto;border-radius:15px;background:#fff;padding:55px 70px}
+
+/*-----------------------------------------------------------------------瑪可緹---*/
+
+#content-2{height:900px}
+
+/*-----------------------------------------------------------------------秋山堂---*/
+
+#content-3{height:900px}
+#content-3 .top{bottom:-5px}
+#content-3 .top:hover{bottom:0px}
+
+/*-----------------------------------------------------------------------茶湯會---*/
+
+#content-4{padding:0 0 90px 0}
+#content-4 .main{width:1200px;margin:350px auto 0 auto;border-radius:15px;background:#fff;padding:55px 70px;background:url(/images/i-31.jpg) 300px 190px no-repeat #fff}
+#content-4 .top{bottom:-5px}
+#content-4 .top:hover{bottom:0px}
+
+/*-----------------------------------------------------------------------頁尾---*/
+
+#footer{background:url(/images/s-05.gif) 0 0 no-repeat #7E6B5A;height:96px;padding:43px 40px 0 40px;color:#c29960;overflow:hidden;position:relative}
+#footer a{color:#abe38a}
+#footer a:hover{text-decoration:underline}
+#footer .left{float:left}
+#footer .right{float:right}

@@ -1,0 +1,23 @@
+
+/*-----------------------------------------------------------------------頁首---*/
+
+#header{height:240px;position:relative}
+#back,#header h1,#link{position:absolute}
+#back{display:block;text-indent:-7777px;width:69px;height:37px;background:url(/images/s-03.png) 0 0 no-repeat;top:65px;left:245px}
+#back:hover{top:62px}
+
+#link{display:block;text-indent:-7777px;width:134px;height:50px;background:url(/images/t-01.png) 0 0 no-repeat;top:200px;right:140px}
+#link:hover{top:197px}
+
+h1{top:110px;left:315px;text-indent:-7777px;background:url(/images/s-04.png) 0 0 no-repeat;width:656px;height:155px}
+
+/*-----------------------------------------------------------------------頁身---*/
+
+#article{padding:40px 0 80px 0;background:url(/images/t-03.png) center 53% no-repeat #fff}
+#article .main{width:995px;margin:0 auto;font-size:.9em;background:url(/images/t-02.png) right 30% no-repeat}
+#article h2{color:#eb68a3;font:300 2.1em 微軟正黑體,Microsoft JhengHei;line-height:1.7em}
+#article h3{color:#eb68a3;font:300 1.5em 微軟正黑體,Microsoft JhengHei;line-height:1.7em}
+#article h4{color:#eb68a3;font:300 1.1em 微軟正黑體,Microsoft JhengHei;line-height:1.7em}
+
+#article a{font-size:1em;color:#0061ad}
+#article a:hover{text-decoration:underline}

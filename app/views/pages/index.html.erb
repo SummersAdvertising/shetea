@@ -1,2 +1,360 @@
-<h1>Pages#index</h1>
-<p>Find me in app/views/pages/index.html.erb</p>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="春水堂, 瑪可緹, 秋山堂, 茶湯會"/>
+	<title>SHARE TEA 春水堂姊妹品牌ㄒㄩˋ茶接力賽</title>
+	<meta name="description" content="誠摯邀請各位茶友們一同參與春水堂和她的姊妹品牌接力賽，成為我們最強力有勁的啦啦夥伴~將茶香聖火持續接力，綿延不息！" />
+	<meta property="og:site_name" content="SHARE TEA 春水堂姊妹品牌ㄒㄩˋ茶接力賽"/>
+	<meta property="og:title" content="SHARE TEA 春水堂姊妹品牌ㄒㄩˋ茶接力賽"/>
+	<meta property="og:description" content="誠摯邀請各位茶友們一同參與春水堂和她的姊妹品牌接力賽，成為我們最強力有勁的啦啦夥伴~將茶香聖火持續接力，綿延不息！"/>
+	<meta property="og:type" content="website"/>
+	<meta property="og:url" content="http://sharetea.chunshuitang.com.tw"/>
+	<meta property="og:image" content="http://sharetea.chunshuitang.com.tw/images/thumb.jpg">
+	<link rel="image_src" href="http://sharetea.chunshuitang.com.tw/images/thumb.jpg">
+	<link rel="shortcut icon" href="http://sharetea.chunshuitang.com.tw/images/favicon.ico"/>
+
+	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+    
+	<link rel="stylesheet" href="/css/reset.css">
+	<link rel="stylesheet" href="/css/index.css">
+	<script src="/js/anchor-art.js"></script>
+	<script>
+	$(document).ready(function(){
+		$(".girls span,#spotlight").hide();
+		$("#spotlight").delay(500).fadeIn(750);
+
+		$(".girls").hover(function(){
+			$(this).children('a').children('span').stop().fadeIn(300);
+		}, function() {
+			$(this).children('a').children('span').stop().fadeOut(100);
+		});
+	});
+	</script>
+</head>
+
+<body>
+	<div id="fb-root"></div>
+	<script>
+	setTimeout(function(){
+		(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/zh_TW/all.js#xfbml=1&appId=267446313433381";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	},1000);
+	</script>
+
+	<div id="wrapper">
+		<div id="header">
+			<ul>
+				<li>
+					<a href="https://www.facebook.com/ChunShui1983" target="_blank">春水堂</a>
+				</li>
+				<li>
+					<a href="https://www.facebook.com/MocktailTea" target="_blank">瑪可緹</a>
+				</li>
+				<li>
+					<a href="https://www.facebook.com/chioushantangtea?ref=hl" target="_blank">秋山堂</a>
+				</li>
+				<li>
+					<a href="https://www.facebook.com/pages/茶湯會/552315764806885" target="_blank">茶湯會</a>
+				</li>
+			</ul>
+			<div id="spotlight"></div>
+			<div class="girls" id="girl-1">
+				<a href="#content-1">
+					<span>春水堂</span>
+					<img src="/images/i-02.png"/>
+				</a>
+			</div>
+			<div class="girls" id="girl-2">
+				<a href="#content-2">
+					<span>瑪可緹</span>
+					<img src="/images/i-03.png"/>
+				</a>
+			</div>
+			<div class="girls" id="girl-3">
+				<a href="#content-3">
+					<span>秋山堂</span>
+					<img src="/images/i-04.png"/>
+				</a>
+			</div>
+			<div class="girls" id="girl-4">
+				<a href="#content-4">
+					<span>茶湯會</span>
+					<img src="/images/i-05.png"/>
+				</a>
+			</div>
+			<p>
+				夏季運動會來臨，春水堂和她的姐妹們也躍躍欲試，想要組隊報名比賽！
+				<br />
+				春子、瑪兒、秋姐、茶妹即將攜手合作，在接力賽中突破重圍，衝向完美ㄒㄩˋ茶線！
+				<br />
+				誠摯邀請各位茶友們一同參與春水堂和她的姊妹品牌接力賽，
+				<br />
+				成為我們最強力有勁的啦啦夥伴~將茶香聖火持續接力，綿延不息！
+			</p>
+			<div id="quick">
+				<table width="100%" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td width="9%" align="center" valign="top">
+							<a href="#content-1" class="brand">
+								<img src="/images/i-08.jpg"/>
+							</a>
+						</td>
+						<td width="7%" align="center" valign="top">
+							<span>
+								<img src="/images/i-09.jpg"/>
+							</span>
+						</td>
+						<td width="8%" align="center" valign="top">
+							<a href="#content-2" class="brand">
+								<img src="/images/i-10.jpg"/>
+							</a>
+						</td>
+						<td width="7%" align="center" valign="top">
+							<span>
+								<img src="/images/i-09.jpg"/>
+							</span>
+						</td>
+						<td width="9%" align="center" valign="top">
+							<a href="#content-3" class="brand">
+								<img src="/images/i-11.jpg"/>
+							</a>
+						</td>
+						<td width="7%" align="center" valign="top">
+							<span>
+								<img src="/images/i-09.jpg"/>
+							</span>
+						</td>
+						<td width="8%" align="center" valign="top">
+							<a href="#content-4" class="brand">
+								<img src="/images/i-12.jpg"/>
+							</a>
+						</td>
+						<td width="34%" align="center" valign="top">
+							<a href="/uploads" class="link">
+								<img src="/images/i-13.png"/>
+							</a>
+						</td>
+						<td width="11%" align="center" valign="middle">
+							<div class="fb-like" data-href="https://www.facebook.com/ChunShui1983" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div id="article">
+			<div id="content-1" class="content">
+				<a class="top" href="#wrapper">
+					<img src="/images/i-23.png"/>
+				</a>
+				<div class="intro">
+					<a href="#content-1">
+						<img src="/images/i-14.jpg"/>
+					</a>
+					<p>
+						大會公布第一棒，春水堂！預備備~開始！
+						<br />
+						萬眾矚目的春子果然不失所望，飛也似的向前衝！
+					</p>
+					<div class="item">
+						<img src="/images/i-15.png"/>
+					</div>
+				</div>
+				<!--intro-->
+				<div class="main">
+					<table width="100%" border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td width="330" height="120" valign="top">&nbsp;</td>
+							<td width="69%" valign="top">
+								<p>
+									春水堂 31 周年的生日，我們特別準備了許多好吃、好玩、好用的禮物和活動，
+									<br />
+									要分享給死忠愛著春水堂的茶友們。準備好迎接驚喜了嗎？
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td height="30" colspan="2" valign="top">
+								<img src="/images/i-19.jpg" />
+							</td>
+						</tr>
+						<tr>
+							<td height="407" colspan="2" valign="top" style="background:url(/images/i-20.jpg) 0 0 no-repeat;padding:20px 0 0 275px;border-bottom:1px solid #FFE7B1">
+								活動期間：2014/5/1~2014/5/31
+								<br />
+								限定好康別錯過，快來春水堂全台各分店將 31st 紀念保溫瓶帶回家吧，讓我們相愛一生一世！
+							</td>
+						</tr>
+					</table>
+					<table width="100%" border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td width="63%">
+								<br />
+								<img src="/images/i-21.jpg"/>
+								<p>
+									<br />
+									大家來找茶！千呼萬喚春水堂！沒錯，我們找的就是你！
+									<br />
+									千呼萬喚尋出來～春仔、阿水、老堂快快來！自 2014/5/4~2014/5/10 止，
+									<br />
+									凡姓名中有【春水堂】三字其中一字者，即享購買冰珍奶小杯免費升級中杯。
+								</p>
+							</td>
+							<td width="37%">
+								<br />
+								<img src="/images/i-22.jpg"/>
+								<p>
+									<br />
+									於 2014/5/20 當日，凡點購任一飲品，展示愛茶心，
+									<br />
+									消費即贈 31st 紀念 L 夾乙個。
+									<br />
+									<span>(單筆消費限贈乙個，數量有限，贈完為止)</span>
+								</p>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<!--main-->
+			</div>
+			<!--content-1-->
+			<div id="content-2" class="content">
+				<a class="top" href="#wrapper">
+					<img src="/images/i-26.png"/>
+				</a>
+				<div class="intro">
+					<a>
+						<img src="/images/content-2.gif"/>
+					</a>
+					<p>
+						好迅速的，輪到了我們的第二棒，瑪可緹！
+						<br />
+						瑪兒這位都會女性果然不一樣，連跑步都如此優雅~
+					</p>
+					<div class="item">
+						<img src="/images/i-25.png"/>
+					</div>
+				</div>
+			</div>
+			<div id="content-3" class="content">
+				<a class="top" href="#wrapper">
+					<img src="/images/i-28.png"/>
+				</a>
+				<div class="intro">
+					<a>
+						<img src="/images/content-3.gif"/>
+					</a>
+					<p>
+						很快的，輪到了我們的第三棒，秋山堂！
+						<br />
+						秋姐平常泡茶慣了，沒想到跑起步來也是輕鬆自在的樣子，著實厲害厲害！
+					</p>
+					<div class="item">
+						<img src="/images/i-27.png"/>
+					</div>
+				</div>
+			</div>
+			<div id="content-4" class="content">
+				<a class="top" href="#wrapper">
+					<img src="/images/i-35.png"/>
+				</a>
+				<div class="intro">
+					<a>
+						<img src="/images/content-4.gif"/>
+					</a>
+					<p>
+						等待已久的茶湯會，我們的最終棒，終於輪到她了！
+						<br />
+						茶妹暖身已久，就等待這一個光榮的時刻，全力衝刺奔向完美ㄒㄩˋ茶線！
+					</p>
+					<div class="item">
+						<img src="/images/i-29.png"/>
+					</div>
+				</div>
+				<!--intro-->
+				<div class="main">
+					<table width="100%" border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td colspan="2" valign="top" height="85">
+								<img src="/images/i-30.png"/>
+							</td>
+						</tr>
+						<tr>
+							<td width="55%" valign="top" height="330">
+								<img src="/images/i-36.jpg"/>
+								<p>
+									自 2014/5/1~2014/5/31 止，凡購買觀音桔祥，
+									<br />
+									加購鮮桔茶即可享半價 27 元優惠(原價 55 元)
+									<br />
+									活動期間，觀音桔祥特價 49 元(原價 55 元)
+								</p>
+							</td>
+							<td width="45%" valign="top">
+								<img src="/images/i-32.jpg"/>
+								<p>
+									自 2014/6/1~2014/6/30 止，凡於活動期間至茶湯會粉絲頁桔氣，
+									<br />
+									只要茶湯會粉絲數突破一萬人，即可享 <b>三日限定觀音桔祥半價優惠</b>
+									<br />
+									(原價 55 元，優惠價 27 元)
+									<br />
+									<span>
+										注意事項：
+										<br />
+										1. 詳細活動辦法請參照現場說明
+										<br />
+										2. 本優惠不與集點卡優惠併用，亦不適用外送優惠
+									</span>
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2" valign="top" height="85">
+								<img src="/images/i-33.jpg" width="1058" height="23" />
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2" align="center" valign="top">
+								<img src="/images/i-34.jpg"/>
+								<br />
+								<br />
+								<p>
+									茶湯會 7 月生日慶，想不想對茶湯會說些祝福的話呢？
+									<br />
+									快來茶湯會的
+									<a href="https://www.facebook.com/pages/茶湯會/552315764806885" target="_blank">官方粉絲團</a>
+									獻上生日祝福吧！祝茶妹天天開心、幸福美滿、永遠青春~Happy Birthday!
+								</p>
+							</td>
+						</tr>
+					</table>
+
+				</div>
+				<!--main-->
+			</div>
+			<!--content-4-->
+		</div>
+		<!--article-->
+		<div id="footer">
+			<p class="left">
+				春水堂姐妹品牌　│
+				<a href="http://chunshuitang.com.tw/index.php" target="_blank">春水堂</a>
+				│
+				<a href="http://www.mocktail.com.tw/#/a3" target="_blank">瑪可緹</a>
+				│
+				<a href="https://www.facebook.com/chioushantangtea?ref=hl" target="_blank">秋山堂</a>
+				│
+				<a href="http://teapatea.com.tw/" target="_blank">茶湯會</a>
+			</p>
+			<p class="right">茶香聖火持續接力，綿延不息</p>
+		</div>
+	</div>
+</body>
+</html>
