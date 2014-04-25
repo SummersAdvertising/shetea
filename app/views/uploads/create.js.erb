@@ -7,14 +7,18 @@ else{
 	FB.api('/me/feed', 'post',
 	{
 		access_token : '<%= @upload.access_token %>',
-		message: '春水堂續茶接力賽',
-		description: '活動測試',
+		message: '玩味 Share Tea, S型好時尚！',
+		description: '上傳 S 型喝法，你就是時尚達人！\n5/1~5/31，依 S 型時尚姿態範例，品嘗春水堂、瑪可緹、秋山堂、茶湯會商品， 將照片上傳，即有機會抽羊脂白手握杯二入！',
 		picture: '<%= "#{root_url}#{@upload.image}" %>',
 		link: '<%= uploads_url %>'
 	},
 	function (response) {
 		if (response && response.id) {
-			alert("分享完成，感謝您參加活動");
+			$.colorbox({inline:true, width:"650", href:"#alert_thx", 
+				onClosed: function(){
+					window.location.href = '/uploads'; 
+				}
+			});
 		}
 		else{
 			alert("分享失敗，請重新上傳分享");
@@ -24,7 +28,8 @@ else{
 				type: "DELETE",
 				url: "<%= upload_path(@upload) %>"
 			});
+			window.location.href = '/uploads'; 
 		}
-		window.location.href = '/uploads'; 
+		
 	});
 }

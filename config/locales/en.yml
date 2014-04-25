@@ -4,6 +4,7 @@ en:
   activerecord:
     attributes:
       upload:
+        fbID: ""
         name: "真實姓名"
         tel: "聯絡電話"
         address: "聯絡地址"
@@ -12,3 +13,7 @@ en:
     errors:
       messages:
         blank: "不能空白"
+        
+  errors:
+    messages:
+      extension_white_list_error: "允許上傳的檔案類型: %{allowed_types}"

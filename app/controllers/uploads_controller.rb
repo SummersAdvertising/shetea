@@ -3,7 +3,7 @@ class UploadsController < ApplicationController
   before_action :set_upload, only: [:destroy]
 
   def index
-    @uploads = Upload.order("created_at DESC").page(params[:page]).per(8)
+    @uploads = Upload.order("created_at DESC").page(params[:page]).per(20)
     @upload = Upload.new
   end
 
