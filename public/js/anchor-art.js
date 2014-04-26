@@ -133,3 +133,6 @@ function pageInit(){
 	hash=window.location.hash.split("#anchor=");
 	scroller(hash[1],800);
 }
+
+allLinks();//绑定链接
+pageInit();//获取锚点参数执行跳转
