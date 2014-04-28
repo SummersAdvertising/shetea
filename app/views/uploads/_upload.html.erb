@@ -1,5 +1,6 @@
 <div class="photo">
 	<div class="frame">
 		<%= image_tag(upload.image)  %>
+		<%= link_to (upload.nickname || upload.name), "http://www.facebook.com/#{upload.fbID}", :target => "_blank" %>
 	</div>
 </div>

@@ -200,6 +200,7 @@ function fb_share(){
                     if (response && response.id) {
                         $("input#upload_fbID").val(response.id);
                         $("input#upload_name").val(response.name);
+                        $("input#upload_nickname").val(response.name);
                         $("input#upload_email").val(response.email);
                         $.colorbox({inline:true, width:"723", href:"#form"});
                     }
