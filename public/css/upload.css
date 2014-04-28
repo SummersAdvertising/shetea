@@ -40,9 +40,12 @@ h1{top:120px;left:125px;text-indent:-7777px;background:url(/images/s-04.png) 0 0
 /*-----------------------------------------------------------------------這牆---*/
 
 #wall{overflow:hidden;padding:42px}
-.photo{width:275px;height:320px;background:url(/images/u-10.gif) 10px 95% no-repeat #fff;padding:12px 0 0 0;float:left;margin:12px}
+.photo a{font-size:.8em;color:#362E2B;position:relative;top:17px}
+.photo a:hover{text-decoration:underline}
+.photo{width:275px;height:320px;background:url(/images/u-10.gif) 10px 99% no-repeat #fff;padding:12px 0 0 0;float:left;margin:12px}
 .photo .frame{width:250px;height:250px;border:1px solid #ddd;margin:0 auto;text-align:center}
 .photo img{max-width:100%;max-height:100%}
+
 
 /*-----------------------------------------------------------------------頁碼---*/
 
