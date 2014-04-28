@@ -1,4 +1,4 @@
-/*-----------------------------------------------------------------------全域---*/
+﻿/*-----------------------------------------------------------------------全域---*/
 
 html{background:#FFF6EA;}
 body{width:1280px;margin:0 auto;font:300 16px 微軟正黑體,Microsoft JhengHei;line-height:1.7em;background:url(/images/s-02.gif) repeat;color:#59493f}
@@ -33,6 +33,7 @@ font:900 .9em 微軟正黑體,Microsoft JhengHei;text-shadow:0 -1px 0 #2F110C;bo
 #quick .link:hover{position:relative;top:-5px}
 
 #header p{text-align:center;font-size:.9em;color:#5F231B;top:400px;left:385px}
+#fb{position:relative;top:-20px}
 
 /*-----------------------------------------------------------------------頁身---*/
 
