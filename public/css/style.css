@@ -7,8 +7,8 @@ body{width:1280px;margin:0 auto;font:300 16px 微軟正黑體,Microsoft JhengHei
 a{font:300 16px 微軟正黑體,Microsoft JhengHei;line-height:1.7em;text-decoration:none;
 -webkit-transition:all ease .3s;-moz-transition:all ease .3s}
 
-#top{position:absolute;right:40px;bottom:87px}
-#top:hover{bottom:90px}
+#top{position:absolute;right:40px;bottom:90px}
+#top:hover{bottom:93px}
 
 /*-----------------------------------------------------------------------頁尾---*/
 
