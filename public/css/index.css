@@ -30,7 +30,8 @@ font:900 .9em 微軟正黑體,Microsoft JhengHei;text-shadow:0 -1px 0 #2F110C;bo
 #quick span{padding:38px 0 0 0;display:inline-block;}
 #quick .brand{padding:38px 0 0 0;display:inline-block;width:100%;height:100%}
 #quick .brand:hover{background:url(/images/i-07.png) right top no-repeat}
-#quick .link:hover{position:relative;top:-5px}
+#quick .link{position:relative;top:10px}
+#quick .link:hover{position:relative;top:7px}
 
 #header p{text-align:center;font-size:.9em;color:#5F231B;top:400px;left:385px}
 #fb{position:relative;top:-20px}
@@ -83,3 +84,7 @@ padding:155px 0 0 0}
 #footer a:hover{text-decoration:underline}
 #footer .left{float:left}
 #footer .right{float:right}
+
+
+#r-link{position:fixed;right:2%;bottom:2%;z-index:9}
+#r-link a:hover{position:relative;left:5px}

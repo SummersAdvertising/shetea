@@ -30,6 +30,17 @@
 		}, function() {
 			$(this).children('a').children('span').stop().fadeOut(100);
 		});
+		$(function(){
+  			$('#r-link').hide()		
+			var $win = $(window).scroll(function(){
+    			if($win.scrollTop() >= 750){
+					$('#r-link').fadeIn(800)
+				} 
+				else {
+					$('#r-link').fadeOut(300)
+				}
+  			});
+		});
 	});
 	</script>
 </head>
@@ -51,6 +62,7 @@
 	</script>
 
 	<div id="wrapper">
+	<div id="r-link"><a href="upload.html"><img src="/images/i-37.png"/></a></div>
 		<div id="header">
 			<ul>
 				<li>
