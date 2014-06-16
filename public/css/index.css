@@ -16,7 +16,7 @@ a{font:300 16px 微軟正黑體,Microsoft JhengHei;line-height:1.7em;text-decora
 #header li a{font-size:12px;color:#555;display:block;width:100%;height:100%;text-align:center;padding:25px 0 0 0;background: url(/images/u-01.png) center 8px no-repeat #fff;}
 #header li a:hover{background:url(/images/u-01.png) center 8px no-repeat #7ECEF4;color:#fff}
 
-#spotlight{z-index:2;top:0;left:215px;background:url(/images/i-39.png) 0 0 no-repeat;width:206px;height:560px;overflow:hidden}
+#spotlight{z-index:2;top:-15px;left:840px;background:url(/images/i-40.png) 0 0 no-repeat;width:206px;height:560px;overflow:hidden}
 
 .girls{z-index:3;}
 .girls span{display:inline-block;width:60px;height:60px;text-align:center;color:#fff;background:#552018;border-radius:50%;padding:20px 0 0 0;
@@ -33,7 +33,7 @@ font:900 .9em 微軟正黑體,Microsoft JhengHei;text-shadow:0 -1px 0 #2F110C;bo
 #quick .link{position:relative;top:10px}
 #quick .link:hover{position:relative;top:7px}
 
-#header p{text-align:center;font-size:.9em;color:#5F231B;top:400px;left:385px}
+#header p{text-align:center;font-size:.9em;color:#5F231B;top:400px;left:385px;z-index:5}
 #fb{position:relative;top:-20px}
 
 /*-----------------------------------------------------------------------頁身---*/
